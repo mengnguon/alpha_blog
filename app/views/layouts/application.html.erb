@@ -9,8 +9,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-
+  <body id="mengnguon">
+    <%= render 'layouts/navigation' %>
+    <br>
+    <p></p>
     <%= render 'layouts/messages' %>
     <%= yield %>
   </body>

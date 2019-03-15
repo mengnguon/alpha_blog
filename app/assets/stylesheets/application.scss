@@ -1,0 +1,32 @@
+@import "bootstrap";
+
+
+#logo{
+  color: red !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 35px;
+  letter-spacing: -2px;
+  font-family: Karla,sans-serif !important;
+  font-weight: bold;
+}
+
+#mengnguon{
+  background-color: #ff4d4d !important;
+  color: #f2f2f2;
+  font-family: arial;
+}
+
+.btn-outline-success{
+  border-color: red !important;
+  color: red !important;
+}
+.btn:hover{
+  color:white !important;
+  background-color: red;
+
+}
+
+.navbar{
+  padding: 12px;
+}
