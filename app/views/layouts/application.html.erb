@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title img src="https://www.google.com/url?sa=i&source=imgres&cd=&ved=2ahUKEwiPt5So8YXhAhVDjeYKHajVBxwQjRx6BAgBEAU&url=http%3A%2F%2Fwww.alphaclub.org%2F&psig=AOvVaw1nZrjxp0GUorg3pPOlNIZI&ust=1552799033778205" alt="logo" >AlphaBlog</title>
+    <link rel="img src="https://www.google.com/url?sa=i&source=imgres&cd=&ved=2ahUKEwiPt5So8YXhAhVDjeYKHajVBxwQjRx6BAgBEAU&url=http%3A%2F%2Fwww.alphaclub.org%2F&psig=AOvVaw1nZrjxp0GUorg3pPOlNIZI&ust=1552799033778205" href="/css/master.css">
+    <title>AlphaBlog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,11 +10,20 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body id="mengnguon">
+  <body>
     <%= render 'layouts/navigation' %>
-    <br>
-    <p></p>
+
     <%= render 'layouts/messages' %>
-    <%= yield %>
+
+    <div class="container" id="mengnguon">
+      <br>
+      <%= yield %>
+      <br>
+    </div>
+    <%= render 'layouts/footer' %>
+    <br>
+    <%= debug(params) if Rails.env.development? %>
+
   </body>
+
 </html>

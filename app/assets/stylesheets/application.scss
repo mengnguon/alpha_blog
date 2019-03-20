@@ -1,5 +1,13 @@
 @import "bootstrap";
-
+@import url('https://fonts.googleapis.com/css?family=Margarine');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan|Margarine');
+h1{
+  font-family: 'Baloo Chettan', cursive;
+  font-size: 60px;
+}
+body {
+  font-family: Roboto, Arial, sans-serif !important;
+}
 
 #logo{
   color: red !important;
@@ -14,7 +22,6 @@
 #mengnguon{
   background-color: #ee4d4d !important;
   color: #f2f2f2;
-  font-family: arial;
 }
 
 .btn-outline-success{
@@ -37,4 +44,17 @@
 .btn-size{
   padding: 5px;
   float: right;
+}
+
+footer{
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 15px;
+}
+footer small{
+  float:left;
+}
+footer ul{
+  float:right;
 }
