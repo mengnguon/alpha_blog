@@ -10,19 +10,23 @@
       <body>
         <h1>The list of articles</h1>
 
-        <%= link_to 'Create an article', new_article_path %>
-
+        <%= link_to 'Create an article', new_article_path, :class => "btn btn-outline-dark", :id => "text-size"%>
+        <p></p>
         <% @articles.each do |article| %>
           <ul>
             <li>
               ID: <%= article.id %>
               <br>
               Title: <%= article.title %> <br> Description: <%= article.description %>
+              <div id="text-style" class="btn-size">
+                <%= link_to 'Show', article_path(article), :class => "btn btn-outline-info" %>
+                <%= link_to 'Edit', edit_article_path(article), :class => "btn btn-outline-dark" %>
+                <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"}, :class => "btn btn-outline-warning" %>
+              </div>
               <br>
               Created: <%= article.created_at %>, Updated: <%= article.updated_at %>
-              <%= link_to 'Show', article_path(article) %>
-              <%= link_to 'Edit', edit_article_path(article) %>
-              <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"} %>
+
+
             </li>
           </ul>
 
