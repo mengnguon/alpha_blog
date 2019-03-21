@@ -1,0 +1,31 @@
+<body>
+  <div class="container">
+    <h1 align="center">Welcome to <%= @user.username %>'s page</h1>
+    <p>Username: <%= @user.username %></p>
+    <p>Email: <%= @user.email %></p>
+
+    <h4><%= @user.username %>'s articles</h4>
+    <% @user.articles.each do |article| %>
+      <ul>
+        <li>
+          ID: <%= article.id %>
+          <br>
+          Title: <%= article.title %> <br> Description: <%= article.description %>
+          <div id="text-style" class="btn-size">
+            <%= link_to 'Show', article_path(article), :class => "btn btn-outline-info" %>
+            <%= link_to 'Edit', edit_article_path(article), :class => "btn btn-outline-dark" %>
+            <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"}, :class => "btn btn-outline-warning" %>
+          </div>
+          <br>
+          Created By: <%= article.user.username if article.user %>
+          <br>
+          Created: <%= time_ago_in_words(article.created_at) %> ago, Updated: <%= time_ago_in_words(article.updated_at) %> ago
+
+
+        </li>
+      </ul>
+
+    <% end %>
+
+  </div>
+</body>
